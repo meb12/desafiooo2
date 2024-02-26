@@ -357,6 +357,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -416,7 +417,6 @@ footer {
 #modal-cadastro.hide,
 #fade.hide,
 #modal-login.hide {
-  transition: 0.5s;
   display: none;
 }
 .carrossel {
@@ -539,9 +539,18 @@ footer {
   .logout {
     font-size: 16px;
   }
+
+  #modal-cadastro,
+  #modal-login {
+    width: 70vw;
+    height: 100vh;
+  }
+  .cpf-nascimento {
+    flex-direction: column;
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .size-logo-gr {
     width: 140px;
     height: 140px;
@@ -577,5 +586,10 @@ footer {
   .home,
   .logout {
     font-size: 14px;
+  }
+  #modal-cadastro,
+  #modal-login {
+    width: 90vw;
+    height: 100vh;
   }
 }
