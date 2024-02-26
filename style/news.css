@@ -3,11 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  width: auto;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 4px 4px 12px #aaaaaa;
   padding: 100px 0 0 0;
   width: 100vw;
 }
@@ -93,7 +89,8 @@
 /* desktop */
 @media screen and (max-width: 1200px) {
   .div-news {
-    height: 100vh;
+    padding: 130px 0 0 0;
+    width: 80vw;
   }
 }
 
@@ -111,7 +108,7 @@
   }
   .div-news {
     padding: 150px 0 0 0;
-    height: 1'00vh;
+    height: 100vh;
   }
   .news-img {
     width: 200px;

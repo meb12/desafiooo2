@@ -50,6 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  padding: 10px;
 }
 
 .size-logo {
@@ -455,7 +456,7 @@ footer {
 
   .nav-list {
     position: absolute;
-    top: 74px;
+    top: 73px;
     right: 0;
     width: 50vw;
     height: 100vh;
@@ -499,6 +500,9 @@ footer {
   .size-logo-gr {
     width: 200px;
     height: 200px;
+  }
+  .div-header-nav {
+    padding: 20px;
   }
 }
 
@@ -583,6 +587,7 @@ footer {
     width: 10px;
     height: 10px;
   }
+
   .home,
   .logout {
     font-size: 14px;
@@ -591,8 +596,12 @@ footer {
   #modal-login {
     width: 90vw;
     height: 100vh;
+    overflow-y: auto;
   }
   .cpf-nascimento {
     flex-direction: column;
+  }
+  .form-title-sigIn {
+    font-size: 14px;
   }
 }
