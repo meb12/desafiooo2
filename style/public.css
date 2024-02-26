@@ -1,0 +1,80 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: initial;
+}
+
+.form-title {
+  color: blue;
+  font-weight: bold;
+  font-size: 30px;
+}
+.form-box {
+  margin: 10px;
+}
+.news {
+  color: white;
+}
+
+.camp-text {
+  width: 50vw;
+  border-radius: 24px;
+  border: solid 1px;
+  display: block;
+  color: black;
+  padding: 10px;
+}
+
+.camp-title {
+  line-height: 1.5;
+  padding: 0 0 0.1em 1em;
+  font-weight: 700;
+  color: blue;
+  font-size: 30px;
+}
+
+.form-button {
+  padding: 1em 3em;
+  margin: 2em 0;
+  border-radius: 24px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  transition: 0.4s all;
+}
+.form-button:hover {
+  color: blue;
+}
+.camp_textArea {
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textA {
+  resize: none;
+}
+@media screen and (max-width: 1200px) {
+  .camp-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .camp-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .camp-title {
+    font-size: 14px;
+  }
+}
