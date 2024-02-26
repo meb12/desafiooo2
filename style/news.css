@@ -107,10 +107,14 @@
   .news-text,
   .div-author-news,
   .news-subtitle {
-    font-size: 14px;
+    font-size: 12px;
   }
   .div-news {
     padding: 150px 0 0 0;
-    height: 100vh;
+    height: 1'00vh;
+  }
+  .news-img {
+    width: 200px;
+    height: auto;
   }
 }
