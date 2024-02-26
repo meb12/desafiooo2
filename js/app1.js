@@ -16,10 +16,10 @@ const toggleModalCadastro = () => {
   fade.classList.toggle("hide");
 };
 
-[abreModalLogin, fechaModalLogin, fade].forEach((el) => {
+[abreModalLogin, fechaModalLogin].forEach((el) => {
   el.addEventListener("click", () => toggleModalLogin());
 });
 
-[abreModalCadastro, fechaModalCadastro, fade].forEach((el) => {
+[abreModalCadastro, fechaModalCadastro].forEach((el) => {
   el.addEventListener("click", () => toggleModalCadastro());
 });
