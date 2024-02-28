@@ -18,6 +18,19 @@ h1 {
   gap: 5px;
   font-size: 40px;
 }
+.esconde-user {
+  display: none;
+}
+
+.user-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.user {
+  color: white;
+}
 body {
   background-color: #eeeeee;
   display: flex;
@@ -30,9 +43,14 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-/* .logout {
+.email-senha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logout {
   display: none;
-} */
+}
 
 .header {
   background-color: black;
@@ -110,7 +128,6 @@ body {
 
 .nav-a:hover {
   font-weight: bold;
-  font-size: 16px;
 }
 
 .button-nav:hover,
@@ -142,6 +159,8 @@ body {
   align-items: center;
   background-color: white;
   border: 0;
+  width: 10px;
+  height: 10px;
 }
 .principal {
   background-color: black;
@@ -155,7 +174,7 @@ body {
 }
 .size-icons {
   width: 20px;
-  height: 25px;
+  height: 20px;
 }
 .size-logo-gr {
   width: 240px;
@@ -228,27 +247,30 @@ body {
 .div-card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   gap: 30px;
   margin-top: 30px;
 }
 
 .card {
   background-color: white;
-  max-width: calc(33.33% - 20px);
+  width: 100%;
   min-height: 200px;
   border-radius: 12px;
   box-shadow: 4px 4px 12px #aaaaaa;
   display: flex;
-  flex: 0 1 calc(33.33% - 20px);
   justify-content: center;
   margin-bottom: 20px;
 }
-
+.card-text {
+  max-width: 240px;
+}
 .card-img {
   width: auto;
-  height: auto;
+  height: 200px;
+  /* redimensiona a imagem */
+  object-fit: cover;
 }
 .card-readMore {
   display: flex;
@@ -325,6 +347,7 @@ footer {
   border: none;
   border-radius: 20px;
 }
+
 #fade {
   position: fixed;
   top: 0;
@@ -341,6 +364,18 @@ footer {
 #modal-login {
   background-color: #3077ab;
 }
+#modal-cadastro {
+  width: 50vw;
+  height: 80vh;
+}
+
+.btn-login {
+  padding: 20px;
+}
+#modal-login {
+  width: 50vw;
+  height: 60vh;
+}
 #modal-cadastro,
 #modal-login {
   position: fixed;
@@ -348,8 +383,6 @@ footer {
   top: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  width: 50vw;
-  height: 100vh;
   padding: 30px;
   border-radius: 10px;
 }
@@ -364,28 +397,30 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+.h2-modal {
+  font-size: 20px;
 }
 .modal-body {
   padding: 20px;
 }
-.login {
-  margin-top: 20%;
-}
+
 .form-singIn {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 .form-title-sigIn {
-  font-size: 18px;
+  font-size: 16px;
   text-align: initial;
 }
 .tamanho-cpf {
   border: 2px solid blue;
   border-radius: 20px;
-  width: 100%;
-  padding: 10px;
+  width: auto;
+  padding: 5px;
 }
 .cpf-nascimento {
   display: flex;
@@ -395,8 +430,12 @@ footer {
 .form-text-sigIn {
   border: 2px solid blue;
   border-radius: 20px;
-  width: 100%;
-  padding: 10px;
+  width: 50%;
+  padding: 5px;
+}
+.cpf-login {
+  width: 40%;
+  padding: 2px;
 }
 .formulario__termos {
   display: flex;
@@ -407,12 +446,13 @@ footer {
   margin: 20px;
 }
 .termos__texto {
+  font-size: 14px;
   margin-top: 20px;
 }
 .btn-envio {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+
   text-align: center;
 }
 #modal-cadastro.hide,
@@ -463,7 +503,7 @@ footer {
     background: black;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 100px;
     transform: translateX(100%);
     transition: transform 0.4s ease-in;
   }
@@ -494,8 +534,10 @@ footer {
     margin: 20px;
   }
   .div-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
   }
   .size-logo-gr {
     width: 200px;
@@ -503,6 +545,31 @@ footer {
   }
   .div-header-nav {
     padding: 20px;
+  }
+  .form-text-sigIn {
+    font-size: 12px;
+    padding: 0;
+  }
+  .tamanho-cpf {
+    padding: 0;
+    font-size: 12px;
+  }
+  .form-title-sigIn {
+    font-size: 14px;
+  }
+  .termos__texto {
+    font-size: 12px;
+  }
+  .btn-envio,
+  .modal-close {
+    font-size: 14px;
+  }
+  #modal-cadastro {
+    width: 50vw;
+    height: 40vh;
+  }
+  #modal-login {
+    height: 30vh;
   }
 }
 
@@ -544,13 +611,34 @@ footer {
     font-size: 16px;
   }
 
-  #modal-cadastro,
-  #modal-login {
-    width: 70vw;
-    height: 100vh;
+  #modal-cadastro {
+    width: 50vw;
+    height: 40vh;
   }
-  .cpf-nascimento {
-    flex-direction: column;
+
+  .card-img {
+    height: 160px;
+  }
+
+  .form-text-sigIn {
+    font-size: 10px;
+    padding: 0;
+    width: 100%;
+  }
+  .tamanho-cpf {
+    padding: 0;
+    font-size: 10px;
+    width: 100%;
+  }
+  .form-title-sigIn {
+    font-size: 12px;
+  }
+  .termos__texto {
+    font-size: 8px;
+  }
+  .btn-envio,
+  .modal-close {
+    font-size: 12px;
   }
 }
 
@@ -592,16 +680,56 @@ footer {
   .logout {
     font-size: 14px;
   }
-  #modal-cadastro,
-  #modal-login {
-    width: 90vw;
-    height: 100vh;
-    overflow-y: auto;
-  }
+
   .cpf-nascimento {
     flex-direction: column;
   }
   .form-title-sigIn {
     font-size: 14px;
   }
+  .div-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-text-sigIn {
+    font-size: 8px;
+    padding: 0;
+    width: 100%;
+  }
+  .tamanho-cpf {
+    padding: 0;
+    font-size: 8px;
+    width: 100%;
+  }
+  .form-title-sigIn {
+    font-size: 10px;
+  }
+  .termos__texto {
+    font-size: 10px;
+    max-width: 250px;
+  }
+  .formulario__termos {
+    width: 200px;
+  }
+  .btn-envio,
+  .modal-close {
+    font-size: 12px;
+  }
+  #modal-cadastro {
+    width: 50vw;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .formulario__termos {
+    width: 100px;
+    height: 200px;
+  }
+  .modal-close,
+  .btn-envio {
+    font-size: 8px;
+  }
+}
+
+.esconde-a {
+  display: none;
 }

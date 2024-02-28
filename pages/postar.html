@@ -37,26 +37,30 @@
     <form class="container-form">
       <h2 class="form-title">Faça uma publicação!</h3>
         <div class="form-box">
-          <label class="camp-title" for="url">Título</label>
-          <input name="url" class="camp-text" required placeholder="Título principal para sua notícia" id='url' data-titulo />
+          <label class="camp-title" for="titulo">Título</label>
+          <input class="camp-text" required placeholder="Título principal para sua notícia" id='titulo' />
         </div>
         <div class="form-box">
-          <label class="camp-title" for="titulo">Subtítulo</label>
-          <input name="titulo" class="camp-text" required placeholder="Breve descrição" id='titulo' data-titulo />
+          <label class="camp-title" for="subtitulo">Subtítulo</label>
+          <input class="camp-text" required placeholder="Breve descrição" id='subtitulo' />
         </div>
 
         <div class="form-box">
-          <label class="camp-title" for="imagem">Imagem</label>
-          <input name="imagem" class="camp-text" required placeholder="Insira a url da imagem" id='imagem' data-imagem />
+          <label class="camp-title-img" for="imagem">Envie uma imagem</label>
+          <input name="imagem" id="imagem" src="#" class="camp-img" type="file" />
+          <h2></h2>
         </div>
 
         <div class="camp_textArea">
-          <label class="camp-title" for="imagem">Texto</label>
-          <textarea name="texto" class="camp-text textA" cols="30" rows="10"></textarea>
+          <label class="camp-title" for="texto">Texto</label>
+          <textarea id="texto" class="camp-text textA" cols="30" rows="10"></textarea>
         </div>
-        <input class="form-button" type="submit" />
+        <div class="button-enviar">
+          <button id="btn-publicacao" class="form-button" type="button">Enviar</button>
+        </div>
     </form>
   </div>
+  <script type="module" src="../js/criarPublicacao.js"></script>
 </body>
 
 </html>

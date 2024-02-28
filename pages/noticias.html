@@ -25,6 +25,9 @@
       <h1><img class="size-logo" src="../img/modalgr.png" alt="logo modalgr">
       </h1>
     </a>
+    <div class="div-user">
+      <i class="bi bi-person-check-fill user"> Maria Eduarda</i>
+    </div>
 
     <div id="search" class="div-search-box">
       <input id="input_search" type="text" class="search-box" placeholder="Pesquisar...">
@@ -32,6 +35,7 @@
         <img class="size-icons" src="../img/lupa.png" alt="">
       </button>
     </div>
+
     <div class="div-header-nav">
       <a href="../pages/index.html" class="home">Home</a>
       <a href="" class="logout">Sair</a>
@@ -40,52 +44,50 @@
 
 
   <div class="container div-news">
-    <div class="div-header">
-      <h2 class="news-title">HTML: Sua história, função e importância para a Internet</h2>
-      <h3 class="news-subtitle">A ModalGR agora é Empresa Amiga da Gota de Leite. A parceria foi oficializada nesta sexta-feira (08/04), quando representantes da instituição fizeram uma apresentação sobre a empresa. O selo tem duração de 1 ano, podendo ser renovado em 2023. A iniciativa faz parte da cultura ESG da empresa.</h3>
-    </div>
+    <div class="div-noticia">
+      <div class="div-header">
+        <h2 class="news-title">HTML: Sua história, função e importância para a Internet</h2>
+        <h3 class="news-subtitle">A ModalGR agora é Empresa Amiga da Gota de Leite. A parceria foi oficializada nesta sexta-feira (08/04), quando representantes da instituição fizeram uma apresentação sobre a empresa. O selo tem duração de 1 ano, podendo ser renovado em 2023. A iniciativa faz parte da cultura ESG da empresa.</h3>
+      </div>
 
-    <div class="div-img">
-      <img class="news-img" src="../img/gotadeleite_modalgr-4.jpg" alt="">
-      <h3 class="news-img-subtitle">Foto – Divulgação</h3>
-    </div>
+      <div class="div-img">
+        <img class="news-img" src="../img/gotadeleite_modalgr-4.jpg" alt="">
+        <h3 class="news-img-subtitle">Foto – Divulgação</h3>
+      </div>
 
-    <div class="news-p">
-      <p class="news-text"> A Assistência a Infância de Santos Gota de Leite é uma instituição privada, filantrópica, sem fins lucrativos, que atende crianças de 11 meses a 5 anos e 11 meses na creche e pré-escola, além das crianças e adolescentes, de 6 a 17 anos, nos projetos Musicalidade na Gota e Gotas no Judô.</p>
-    </div>
-    <div class="footer-news ">
-      <div class="div-author-news">
-        <div>
-          <a href="#">Dariusz
-            Gross
-            #DATAsculptor</a>
+      <div class="news-p">
+        <p class="news-text"> A Assistência a Infância de Santos Gota de Leite é uma instituição privada, filantrópica, sem fins lucrativos, que atende crianças de 11 meses a 5 anos e 11 meses na creche e pré-escola, além das crianças e adolescentes, de 6 a 17 anos, nos projetos Musicalidade na Gota e Gotas no Judô.</p>
+      </div>
+      <div class="footer-news">
+        <div class="div-author-news">
           <div>
-            <span class="size-letter"> Dec 15, 2023</span>
-            <span class="size-letter"> <i class="bi bi-dot"></i></span>
-            <span class="size-letter"><i class="bi bi-stars"></i></span>
+            <a href="#">Dariusz
+              Gross
+              #DATAsculptor</a>
+            <div>
+              <span class="size-letter"> Dec 15, 2023</span>
+              <span class="size-letter"> <i class="bi bi-dot"></i></span>
+              <span class="size-letter"><i class="bi bi-stars"></i></span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="div-author-news ">
-        <div>
-          <a href="#">Dariusz
-            Gross
-            #DATAsculptor</a>
-          <div>
-            <span class="size-letter"> Dec 15, 2023</span>
-            <span class="size-letter"> <i class="bi bi-dot"></i></span>
-            <span class="size-letter"><i class="bi bi-stars"></i></span>
-          </div>
+        <div class="div-like">
+          <button id="like">
+            <div class="label">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.4 5.25C5.61914 5.25 3.25 7.3293 3.25 10.0298C3.25 11.8927 4.12235 13.4612 5.27849 14.7604C6.43066 16.0552 7.91714 17.142 9.26097 18.0516L11.5796 19.6211C11.8335 19.793 12.1665 19.793 12.4204 19.6211L14.739 18.0516C16.0829 17.142 17.5693 16.0552 18.7215 14.7604C19.8777 13.4612 20.75 11.8927 20.75 10.0298C20.75 7.3293 18.3809 5.25 15.6 5.25C14.1665 5.25 12.9052 5.92214 12 6.79183C11.0948 5.92214 9.83347 5.25 8.4 5.25Z" fill="black" />
+              </svg>
+              Curtir
+            </div>
+            <div class="number" id="number">50</div>
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
-
+  <script type="module" src="../js/like.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

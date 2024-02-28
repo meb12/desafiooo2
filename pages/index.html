@@ -25,13 +25,16 @@
             <button class="hamburguer"></button>
             <ul class="nav-list">
                 <li><a class="nav-a" href="https://modalgr.com.br/">Modalgr</a></li>
-                <li><a class="nav-a" href="../pages/noticias.html">Notícias</a></li>
+                <li><a class="nav-a" href="../pages/posts.html">Notícias</a></li>
                 <li> <a class=" nav-a button-nav" href="../pages/postar.html">Publicar</a></li>
                 <li><a id="btn-logar" class="nav-a button-nav">Logar</a></li>
                 <li><a id="btn-cadastrar" class="nav-a  button-nav">Cadastrar</a></li>
-                <a href="" class="nav-a button-nav logout">Sair</a>
+
             </ul>
         </nav>
+        <div id="div-user" class="esconde-user div-js">
+            <i id="icon-user" class="bi bi-person-check-fill user i-js"></i>
+            <a id="icon-sair" href=""><i class="bi bi-box-arrow-right user a-js"></i></a>
         </div>
     </header>
 
@@ -39,24 +42,32 @@
 
     <div id="modal-cadastro" class="hide">
         <div class="modal-header">
-            <h2>CADASTRO</h2>
-            <button class="modal-close close-cadastro">Fechar</button>
+            <h2 class="h2-modal">CADASTRO</h2>
+            <button id="fecha-cadastro" class="modal-close close-cadastro">Fechar</button>
         </div>
 
         <div class="modal-body">
-            <form class="forms-principal">
+            <form id="form-cadastro" class="forms-principal" data-form-cadastro>
+
                 <fieldset class="form-singIn">
                     <label class="form-title-sigIn" for="nome">Nome</label>
                     <input name="nome" id="nome" class="form-text-sigIn" type="nome" minlength="3" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
 
-                <fieldset class="form-singIn">
-                    <label class="form-title-sigIn" for="email">E-mail</label>
-                    <input name="email" id="email" class="form-text-sigIn" type="email" minlength="4" required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
+                <div class="email-senha">
+                    <fieldset class="form-singIn">
+                        <label class="form-title-sigIn" for="email">E-mail</label>
+                        <input name="email" id="email" class="form-text-sigIn" type="email" minlength="4" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
 
+                    <fieldset class="form-singIn">
+                        <label class="form-title-sigIn" for="passaword">Senha</label>
+                        <input name="password" id="password" class="form-text-sigIn" required type="password" />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                </div>
                 <div class="cpf-nascimento">
                     <fieldset class="form-singIn">
                         <label class="form-title-sigIn" for="cpf">CPF (apenas números)</label>
@@ -71,6 +82,7 @@
                     </fieldset>
                 </div>
 
+
                 <fieldset class="formulario__termos">
                     <input name="termos" class="termos__input" type="checkbox" required>
                     <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme
@@ -81,7 +93,7 @@
                 </fieldset>
 
                 <div class="btn-envio">
-                    <button value="Avançar" class="modal-envio" id="enviar" data-botao-enviar type="submit"> Avançar </button>
+                    <button value="Avançar" class="modal-envio" id="enviar" data-botao-enviar type="button"> Avançar </button>
                     <span class="mensagem-erro"></span>
                 </div>
             </form>
@@ -90,27 +102,27 @@
 
     <div id="modal-login" class="hide">
         <div class="modal-header">
-            <h2>LOGAR</h2>
-            <button class="modal-close close-login">Fechar</button>
+            <h2 class="h2-modal">LOGAR</h2>
+            <button id="fecha-login" class="modal-close close-login">Fechar</button>
         </div>
 
-        <div class="modal-body login">
-            <form class="forms-principal">
-
+        <div class="modal-body">
+            <form class="forms-principal login">
                 <fieldset class="form-singIn">
                     <label class="form-title-sigIn" for="email">E-mail</label>
-                    <input name="email" id="email" class="form-text-sigIn" type="email" minlength="4" required />
+                    <input name="email" id="email-login" class="tamanho-cpf" type="email" minlength="4" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
 
 
                 <fieldset class="form-singIn">
                     <label class="form-title-sigIn" for="passaword">Senha</label>
-                    <input name="password" id="password" class="campo__escrita--menor tamanho-cpf" required type="password" />
+                    <input name="password" id="password-login" class="tamanho-cpf" required type="password" />
                     <span class="mensagem-erro"></span>
                 </fieldset>
-                <div class="btn-envio">
-                    <button value="Avançar" class="modal-envio" id="enviar" data-botao-enviar type="submit"> Logar </button>
+                <div class="btn-envio btn-login">
+                    <button value="Logar" class="modal-envio" id="loginEnvio" type="button">
+                        Logar </button>
                     <span class="mensagem-erro"></span>
                 </div>
             </form>
@@ -166,85 +178,11 @@
         </div>
     </div>
     <div class="container div-card">
-        <div class="card">
-            <img class="card-img" src="../img/gotadeleite_modalgr-4.jpg" alt="codigo html">
-            <div class="card-body">
-                <h5 class="card-title">ModalGR ganha selo de empresa amiga da Gota de Leite</h5>
-                <p class="card-text">A ModalGR agora é Empresa Amiga da Gota de Leite. A parceria foi oficializada nesta sexta-feira (08/04). </p>
-                <div class="div-author">
-                    <div>
-                        <img class="author" src="../img/autor.png" alt="autor">
-                    </div>
-                    <div>
-                        <a href="#">Dariusz Gross</a>
-                        <div>
-                            <span class="size-letter"> Dec 15, 2023</span>
-                            <span class="size-letter"><i class="bi bi-stars"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../img/Quality-Assurance-Image-Cloud-760.png" alt="codigo html">
-            <div class="card-body">
-                <h5 class="card-title">Quality Assurance (QA): qual é sua importância para o produto?</h5>
-                <p class="card-text">Quando usamos um software, aplicativo ou afins, não paramos para analisar o que o torna qualificado para uso. Isso é papel do profissional de Quality Assurance (QA).</p>
-                <div class="div-author">
-                    <div>
-                        <img class="author" src="../img/autor.png" alt="autor">
-                    </div>
-                    <div>
-                        <a href="#">Dariusz Gross</a>
-                        <div>
-                            <span class="size-letter"> Dec 15, 2023</span>
-                            <span class="size-letter"><i class="bi bi-stars"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../img/professional-service-modalgr.png" alt="codigo html">
-            <div class="card-body">
-                <h5 class="card-title">Professional services: por que contratar na sua empresa?</h5>
-                <p class="card-text">Pode surgir a pergunta: devo empregar um profissional comum ou utilizar um Professional Services de outra empresa?</p>
-                <div class="div-author">
-                    <div>
-                        <img class="author" src="../img/autor.png" alt="autor">
-                    </div>
-                    <div>
-                        <a href="#">Dariusz Gross</a>
-                        <div>
-                            <span class="size-letter"> Dec 15, 2023</span>
-                            <span class="size-letter"><i class="bi bi-stars"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="../img/transferir.png" alt="codigo html">
-            <div class="card-body">
-                <h5 class="card-title">Cultura ágil: o que é e como implantar na sua empresa?</h5>
-                <p class="card-text">O setor de Tecnologia demanda respostas rápidas, assertivas e dinâmicas. Tempo e organização são duas coisas essenciais para os desenvolvedores e profissionais relacionados a TI.</p>
-                <div class="div-author">
-                    <div>
-                        <img class="author" src="../img/autor.png" alt="autor">
-                    </div>
-                    <div>
-                        <a href="#">Dariusz Gross</a>
-                        <div>
-                            <span class="size-letter"> Dec 15, 2023</span>
-                            <span class="size-letter"><i class="bi bi-stars"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul id="lista-cards">
+        </ul>
     </div>
     <div class="card-readMore container">
-        <a class="card-readMore-a" href="../pages/noticias.html">VER TODOS OS POSTS</a>
+        <a class="card-readMore-a" href="../pages/posts.html">VER TODOS OS POSTS</a>
     </div>
 
     <footer>
@@ -257,6 +195,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="../js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../js/criarUsuario.js"></script>
+    <script type="module" src="../js/mostrarNoticia.js"></script>
+    <script type="module" src="../js/logarUser.js"></script>
+    <script type="module" src="../js/logOut.js"></script>
 </body>
 
 </html>

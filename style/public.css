@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  text-align: initial;
 }
 
 .form-title {
@@ -13,6 +12,8 @@
   font-size: 30px;
 }
 .form-box {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
 }
 .news {
@@ -28,9 +29,23 @@
   padding: 10px;
 }
 
+.camp-img {
+  display: none;
+}
+
+.camp-title-img {
+  background-color: grey;
+  padding: 20px 10px;
+  display: block;
+  cursor: pointer;
+}
 .camp-title {
-  line-height: 1.5;
   padding: 0 0 0.1em 1em;
+}
+
+.camp-title,
+.camp-title-img {
+  line-height: 1.5;
   font-weight: 700;
   color: blue;
   font-size: 30px;
@@ -47,6 +62,11 @@
   font-size: 14px;
   border: none;
   transition: 0.4s all;
+}
+.button-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .form-button:hover {
   color: blue;
