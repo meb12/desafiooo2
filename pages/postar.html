@@ -19,11 +19,10 @@
 <body>
 
   <header class="header">
-    <a href="https://modalgr.com.br/">
-      <h1><img class="size-logo" src="../img/modalgr.png" alt="logo modalgr">
-      </h1>
-    </a>
-
+    <div id="div-user-post" class="esconde-user div-js">
+      <i id="icon-user-post" class="bi bi-person-check-fill user i-js"></i>
+      <a id="icon-sair" href=""><i class="bi bi-box-arrow-right user a-js"></i></a>
+    </div>
     <div>
       <h2 class="news">GR NEWS</h2>
     </div>
@@ -42,18 +41,18 @@
         </div>
         <div class="form-box">
           <label class="camp-title" for="subtitulo">Subtítulo</label>
-          <input class="camp-text" required placeholder="Breve descrição" id='subtitulo' />
+          <input class="camp-text" required="required" placeholder="Breve descrição" id='subtitulo' />
         </div>
 
         <div class="form-box">
           <label class="camp-title-img" for="imagem">Envie uma imagem</label>
-          <input name="imagem" id="imagem" src="#" class="camp-img" type="file" />
+          <input name="imagem" id="imagem" src="#" class="camp-img" required="required" type="file" />
           <h2></h2>
         </div>
 
         <div class="camp_textArea">
           <label class="camp-title" for="texto">Texto</label>
-          <textarea id="texto" class="camp-text textA" cols="30" rows="10"></textarea>
+          <textarea id="texto" required="required" class="camp-text textA" cols="30" rows="10"></textarea>
         </div>
         <div class="button-enviar">
           <button id="btn-publicacao" class="form-button" type="button">Enviar</button>
@@ -61,6 +60,8 @@
     </form>
   </div>
   <script type="module" src="../js/criarPublicacao.js"></script>
+  <script type="module" src="../js/logarUserPublicar.js"></script>
+  <script type="module" src="../js/logOut.js"></script>
 </body>
 
 </html>

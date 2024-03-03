@@ -16,25 +16,22 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="https://modalgr.com.br/">
-            <h1><img class="size-logo" src="../img/modalgr.png" alt="logo modalgr">
-            </h1>
-        </a>
-        <nav class="nav">
-            <button class="hamburguer"></button>
-            <ul class="nav-list">
-                <li><a class="nav-a" href="https://modalgr.com.br/">Modalgr</a></li>
-                <li><a class="nav-a" href="../pages/posts.html">Notícias</a></li>
-                <li> <a class=" nav-a button-nav" href="../pages/postar.html">Publicar</a></li>
-                <li><a id="btn-logar" class="nav-a button-nav">Logar</a></li>
-                <li><a id="btn-cadastrar" class="nav-a  button-nav">Cadastrar</a></li>
-
-            </ul>
-        </nav>
+    <header id="indexHeader" class="header-index">
         <div id="div-user" class="esconde-user div-js">
             <i id="icon-user" class="bi bi-person-check-fill user i-js"></i>
             <a id="icon-sair" href=""><i class="bi bi-box-arrow-right user a-js"></i></a>
+        </div>
+        <div>
+            <nav class="nav">
+                <button class="hamburguer"></button>
+                <ul class="nav-list">
+                    <li> <a id="btn-publicar" class="nav-a button-nav publicacao" href="../pages/postar.html">Publicar</a></li>
+                    <li><a class="nav-a" href="https://modalgr.com.br/">Modalgr</a></li>
+                    <li><a class="nav-a" href="../pages/posts.html">Notícias</a></li>
+                    <li><a id="btn-logar" class="nav-a button-nav">Logar</a></li>
+                    <li><a id="btn-cadastrar" class="nav-a  button-nav">Cadastrar</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -135,7 +132,7 @@
             <a href="https://modalgr.com.br/"><img class="size-logo-gr" src="../img/gr_noticias.png" alt="logo GR News"></a>
         </div>
         <div class="div-principal-links">
-            <a href="../pages/postar.html" class="principal-link"><i class="bi bi-caret-right-fill">Publique seu post!</i></a>
+            <a id="btn-publicar-icon" href="../pages/postar.html" class="principal-link publicacao"><i class="bi bi-caret-right-fill">Publique seu post!</i></a>
             <div class="div-principal-links-redes">
                 <a href="https://www.instagram.com/modalgr/"><i class="bi bi-instagram fs-4 cor-icon"></i></a>
                 <a href="https://twitter.com/ModalGR"><i class="bi bi-twitter fs-4 cor-icon "></i></a>
@@ -168,18 +165,14 @@
             </div>
         </div>
     </div>
-    <div class="gr-news container">
-        <h2 class="news">Notícias</h2>
-        <div id="search" class="div-search-box">
-            <input id="input_search" type="text" class="search-box" placeholder="Pesquisar...">
-            <a class="a-search">
-                <img class="size-icons" src="../img/lupa.png" alt="">
-            </a>
+    <div class="news-full-container">
+        <div class="gr-news container">
+            <h2 class="news">ÚLTIMAS ATUALIZAÇÕES</h2>
         </div>
-    </div>
-    <div class="container div-card">
-        <ul id="lista-cards">
-        </ul>
+        <div class="container">
+            <ul id="lista-cards" class="lista-de-cards">
+            </ul>
+        </div>
     </div>
     <div class="card-readMore container">
         <a class="card-readMore-a" href="../pages/posts.html">VER TODOS OS POSTS</a>
@@ -199,6 +192,7 @@
     <script type="module" src="../js/mostrarNoticia.js"></script>
     <script type="module" src="../js/logarUser.js"></script>
     <script type="module" src="../js/logOut.js"></script>
+
 </body>
 
 </html>

@@ -13,9 +13,12 @@ async function criaPubli(evento) {
   const subtitulo = campoSubtitulo.value;
   const texto = campoTexto.value;
   const imagem = x;
-  try {
+
+  if (titulo === "" || subtitulo === "" || texto === "" || imagem === "") {
+    alert("Campo vazio, por favor verifique!");
+  } else {
     await conectaAPI.registrosPubli(titulo, subtitulo, texto, imagem);
-  } catch {}
+  }
 }
 
 btnEnviar.addEventListener("click", (evento) => criaPubli(evento));
@@ -32,20 +35,18 @@ campoImagem.addEventListener("change", () => {
 });
 
 function verificaLog() {
-  console.log("entrou aqui 2");
   if (localStorage.getItem("nome") != null) {
-    console.log("entrou aqui");
     campoTitulo.disabled = false;
     campoSubtitulo.disabled = false;
     campoTexto.disabled = false;
     campoImagem.disabled = false;
     btnEnviar.disabled = false;
   } else {
-    console.log("certoooo");
     campoTitulo.disabled = true;
     campoSubtitulo.disabled = true;
     campoTexto.disabled = true;
     campoImagem.disabled = true;
+    alert("É necessário fazer LogIn!");
   }
 }
 verificaLog();

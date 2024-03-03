@@ -13,7 +13,8 @@ async function listaNews() {
           elemento.subtitulo,
           elemento.img,
           elemento.nomeUsuario,
-          elemento.dataCriacao
+          elemento.dataCriacao,
+          elemento.idPostagem
         )
       )
     );

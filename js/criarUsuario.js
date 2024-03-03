@@ -11,11 +11,20 @@ async function criaUsuario(evento) {
   const cpf = document.querySelector("#cpf").value;
   const aniversario = document.querySelector("#aniversario").value;
   const senha = document.querySelector("#password").value;
-  try {
-    await conectaAPI.registrosAPI(nome, email, cpf, aniversario, senha);
+
+  const cadastraUser = await conectaAPI.registrosAPI(
+    nome,
+    email,
+    cpf,
+    aniversario,
+    senha
+  );
+
+  if (cadastraUser.statusCode != 200) {
+    alert(cadastraUser.message);
+  } else {
+    alert("cadastrado com sucesso!");
     toggleModalCadastro();
-  } catch (error) {
-    alert(error);
   }
 }
 

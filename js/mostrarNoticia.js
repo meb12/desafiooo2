@@ -2,16 +2,24 @@ import { conectaAPI } from "./conectaAPI.js";
 
 const lista = document.querySelector("#lista-cards");
 
-export function constroiCard(titulo, subtitulo, img, nomeUsuario, dataCriacao) {
+export function constroiCard(
+  titulo,
+  subtitulo,
+  img,
+  nomeUsuario,
+  dataCriacao,
+  idPostagem
+) {
   const noticias = document.createElement("li");
   noticias.classList = "card";
+  noticias.setAttribute("id", idPostagem);
   noticias.innerHTML = `<img class="card-img" src="${img}">
   <div class="card-body">
-      <h5 class="card-title">${titulo}</h5>
+      <h5  class="card-title">${titulo}</h5>
       <p class="card-text">${subtitulo}</p>
       <div class="div-author">
          <div>
-              <a href="../pages/noticias.html">${nomeUsuario}</a>
+              <a class="a-postagem" href="../pages/noticias.html?id=${idPostagem}">${nomeUsuario}</a>
               <div>
                   <span class="size-letter">${dataCriacao}</span>
                   <span class="size-letter"><i class="bi bi-stars"></i></span>
@@ -19,7 +27,6 @@ export function constroiCard(titulo, subtitulo, img, nomeUsuario, dataCriacao) {
           </div>
       </div>
   </div>`;
-
   return noticias;
 }
 
@@ -33,7 +40,8 @@ async function listaNoticias() {
           elemento.subtitulo,
           elemento.img,
           elemento.nomeUsuario,
-          elemento.dataCriacao
+          elemento.dataCriacao,
+          elemento.idPostagem
         )
       )
     );

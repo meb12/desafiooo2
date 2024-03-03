@@ -9,7 +9,6 @@ function localNews() {
 
     iconUser.innerHTML = `<span>${nomeUsuario}</span>`;
   } else {
-    console.log("primeira vez");
   }
 }
 

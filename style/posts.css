@@ -1,11 +1,6 @@
 .div-card-posts {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 100px 0 0 0;
+  padding: 100px 0px 0 0;
+  width: 100vw;
 }
 
 @media screen and (max-width: 1200px) {

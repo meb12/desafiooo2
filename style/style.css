@@ -7,6 +7,9 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.publicacao {
+  display: none;
+}
 
 h1 {
   text-align: center;
@@ -62,6 +65,29 @@ body {
   position: fixed;
   width: 100vw;
   z-index: 2;
+  gap: 20px;
+}
+.header-index {
+  background-color: black;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+.header-index-logado {
+  background-color: black;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
 }
 .div-header-nav {
   display: flex;
@@ -76,6 +102,12 @@ body {
   height: 42px;
   margin: 8px;
   padding: 4px;
+}
+.esconde-card {
+  display: none;
+}
+.aparece-card {
+  display: block;
 }
 .a-logo {
   margin-top: 10px;
@@ -159,8 +191,8 @@ body {
   align-items: center;
   background-color: white;
   border: 0;
-  width: 10px;
-  height: 10px;
+  width: 100px;
+  height: 100px;
 }
 .principal {
   background-color: black;
@@ -253,9 +285,29 @@ body {
   margin-top: 30px;
 }
 
+.news-full-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.lista-de-cards-novos {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.lista-de-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
 .card {
   background-color: white;
   width: 100%;
+  max-width: 400px;
   min-height: 200px;
   border-radius: 12px;
   box-shadow: 4px 4px 12px #aaaaaa;
@@ -486,6 +538,9 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
+  .header-index {
+    justify-content: flex-end;
+  }
   body {
     overflow-x: hidden;
   }
@@ -496,7 +551,7 @@ footer {
 
   .nav-list {
     position: absolute;
-    top: 65px;
+    top: 55px;
     right: 0;
     width: 50vw;
     height: 100vh;
@@ -517,7 +572,7 @@ footer {
   }
 
   .nav-list.active {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   .nav-a:hover {
@@ -533,9 +588,11 @@ footer {
   .div-history {
     margin: 20px;
   }
+
   .div-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /*  */
+    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
   }

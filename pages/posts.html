@@ -22,33 +22,31 @@
 <body>
 
   <header class="header">
-    <a href="https://modalgr.com.br/">
-      <h1><img class="size-logo" src="../img/modalgr.png" alt="logo modalgr">
-      </h1>
-    </a>
+    <div>
+      <h2 class="news">GR NEWS</h2>
+    </div>
     <div id="div-user-news" class="esconde-user div-js">
       <i id="icon-user-news" class="bi bi-person-check-fill user i-js"></i>
-      <a id="icon-sair-news" href=""><i class="bi bi-box-arrow-right user a-js"></i></a>
+      <a id="icon-sair" href=""><i class="bi bi-box-arrow-right user a-js"></i></a>
     </div>
     <div id="search" class="div-search-box">
       <input id="input_search" type="text" class="search-box" placeholder="Pesquisar...">
-      <button class="a-search">
-        <img class="size-icons" src="../img/lupa.png" alt="">
-      </button>
+      <a id="pesquisar"><i class="bi bi-search-heart"></i> </a>
     </div>
     <div class="div-header-nav">
       <a href="../pages/index.html" class="home">Home</a>
       <a href="" class="logout">Sair</a>
     </div>
   </header>
-  <div class="container div-card-posts">
-    <ul id="lista-news">
+  <div class="div-card-posts">
+    <ul id="lista-news" class="lista-de-cards">
     </ul>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script type="module" src="../js/mostrarNews.js"></script>
-  <script type="module" src="../js/getUsuario.js"></script>
-  <script type="module" src="../js/logOut2.js"></script>
+  <script type="module" src="../js/mostrarPosts.js"></script>
+  <script type="module" src="../js/logarUserNews.js"></script>
+  <script type="module" src="../js/logOut.js"></script>
+  <script type="module" src="../js/Pesquisar.js"></script>
 </body>
 
 </html>
