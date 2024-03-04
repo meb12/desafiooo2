@@ -9,7 +9,6 @@ function localPublicacao() {
     user.classList.add("user-div");
 
     iconUser.innerHTML = `<span>${nomeUsuario}</span>`;
-  } else {
   }
 }
 

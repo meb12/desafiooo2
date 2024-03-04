@@ -131,24 +131,18 @@ button {
 .label svg {
   margin-right: 4px;
 }
-.label path {
+.curtir {
   fill: #8a8d9b;
   transition: all 0.25s ease-in-out;
+}
+.curtidas {
+  fill: #ff00fd;
 }
 .number {
   color: #8a8d9b;
 }
-button:hover path {
-  fill: #ff00fd;
-}
-button.like .number {
-  color: #ff00fd;
-}
 button.like svg {
   animation: transitionLike 1s ease-in;
-}
-button.like path {
-  fill: #ff00fd;
 }
 
 @keyframes transitionLike {
